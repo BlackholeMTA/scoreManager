@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.202
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScoreManager", "ScoreManager\ScoreManager.csproj", "{6B9DD366-235F-4681-B29D-64BAA9DFEC38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScoreDatabase", "ScoreDatabase\ScoreDatabase.csproj", "{49EC64D4-4E5E-42FC-A5B3-F34489DB174B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6B9DD366-235F-4681-B29D-64BAA9DFEC38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B9DD366-235F-4681-B29D-64BAA9DFEC38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B9DD366-235F-4681-B29D-64BAA9DFEC38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B9DD366-235F-4681-B29D-64BAA9DFEC38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49EC64D4-4E5E-42FC-A5B3-F34489DB174B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49EC64D4-4E5E-42FC-A5B3-F34489DB174B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49EC64D4-4E5E-42FC-A5B3-F34489DB174B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49EC64D4-4E5E-42FC-A5B3-F34489DB174B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {00CCBC1A-7CCC-412F-B57A-71D8FB47BC11}
+	EndGlobalSection
+EndGlobal
