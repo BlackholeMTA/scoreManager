@@ -7,44 +7,67 @@
     <link rel="stylesheet" href="~/Assets/css/reset.css">
     <link rel="stylesheet" href="~/Assets/css/responsive.css">
     <link rel="stylesheet" href="~/Assets/css/style.css">
-    <link rel="stylesheet" href="~/Assets/bootstrap/css/bootstrap.min.css">
+   @* <link rel="stylesheet" href="~/Assets/bootstrap/css/bootstrap.min.css">*@
     <script src="~/Assets/js/jquery-3.3.1.slim.min.js"></script>
     <script src="~/Assets/js/popper.min.js"></script>
     <script src="~/Assets/js/bootstrap.min.js"></script>
     <script src="~/Assets/js/jquery-2.2.4.min.js" type="text/javascript"></script>
     <link rel="stylesheet" href="~/Assets/fonts/font-awesome/css/font-awesome.min.css">
-
+    <link rel="stylesheet" href="~/Assets/css/import/menu.css">
+    <link rel="stylesheet" href="~/Assets/css/import/index.css">
     @*@Styles.Render("~/Content/css")
         @Scripts.Render("~/bundles/modernizr")*@
+    @*table*@
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap4.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap4.min.js"></script>
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+    <div class="wrapper">
+        <div class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <img src="~/Assets/images/logo.png" alt="logo" class="img-fluid">
+                    </div>
+                </div>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
+        </div>
+        <div class="body">
+            @RenderBody()
+        </div>
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="infor">
+                            <p style="margin-top: 20px; font-size: 20px; font-weight: bold;">Thông Tin Liên Lạc</p>
+                            <p style="margin-top: 20px; font-size: 16px; padding-left: 10px;">
+                                Địa chỉ : 236 Hoàng Quốc Việt, Bắc Từ Liêm, Hà Nội <br>
+                                <br> Điện thoại: 069.515200 <br>
+                                <br> Email: info@mta.edu.vn
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="googleMap">
+                            <p style="margin-top: 20px; font-size: 20px; font-weight: bold;">Bản Đồ</p>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d14893.313386370726!2d105.77157707823488!3d21.05954415079202!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1630513365099!5m2!1svi!2s"
+                                    width="346" height="115" style="margin: 5px 5px 5px 5px;" allowfullscreen=""
+                                    loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="authority">© 2021 Bản quyền thuộc Trung tâm CNTT - Học viện KTQS</div>
             </div>
         </div>
     </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
+    
+   
 
     @*@Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")*@

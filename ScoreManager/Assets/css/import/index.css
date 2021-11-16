@@ -1,4 +1,12 @@
-a:hover{
+.content-body{
+    margin-left:20px;
+}
+#example_wrapper {
+    width: 100%;
+}
+
+
+/*a:hover{
 	text-decoration: none;
 }
 .navbar-toggler{
@@ -231,4 +239,4 @@ li.dropdown:hover .dropdown-content{
 }
 #footer .footer-link li a:hover{
 	color: #00ff95;
-}
+}*/

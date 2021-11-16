@@ -154,6 +154,7 @@
     <Content Include="Assets\css\import\header.css" />
     <Content Include="Assets\css\import\index.css" />
     <Content Include="Assets\css\import\information.css" />
+    <Content Include="Assets\css\import\menu.css" />
     <Content Include="Assets\css\import\signin.css" />
     <Content Include="Assets\css\reset.css" />
     <Content Include="Assets\css\responsive.css" />
