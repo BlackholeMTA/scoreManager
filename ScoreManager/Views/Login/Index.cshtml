@@ -1,6 +1,7 @@
 ﻿
 @{
-    Layout = null;
+     Layout = null;
+     var noti = ViewBag.Notification;
 }
 
 <!DOCTYPE html>
@@ -35,46 +36,68 @@
            
         </div>
         <div class="body-login container">
-            <div class="row">
-                <div class="col-md-12 my-5">
-                    <div class="signin">
-                        <h1 class="signin_heading">Đăng Nhập</h1>
-                        <div class="role" style="width: fit-content; margin: auto;">
-                            <div class="form-group">
-                                <input type="radio" name="gender" value="male" id="male">
-                                <label for="male">Sinh viên</label>
-                                <input type="radio" name="gender" value="female" id="female">
-                                <label for="female">Phụ huynh</label>
+             <div class="row">
+                  <div class="col-md-12 my-5">
+                       <div class="signin">
+                            <h1 class="signin_heading">Đăng Nhập</h1>
+                            <div class="role" style="width: fit-content; margin: auto;">
+                                 <div class="form-group">
+                                      <input type="radio" name="gender" value="male" id="male">
+                                      <label for="male">Sinh viên</label>
+                                      <input type="radio" name="gender" value="female" id="female">
+                                      <label for="female">Phụ huynh</label>
+                                 </div>
+                                 @*<label for="role_1" class="checkbox_item">
+                                  <i class="fa fa-check" aria-hidden="true"></i>
+                                  <input type="checkbox" class="checkbox" id="role_1" value="Sinh viên" /> Sinh viên
+                              </label>
+
+                              <label for="role_2" class="checkbox_item">
+                                  <i class="fa fa-check" aria-hidden="true"></i>
+                                  <input type="checkbox" class="checkbox" id="role_2" value="Phụ huynh" /> Phụ huynh
+                              </label>*@
+
+
                             </div>
-                            @*<label for="role_1" class="checkbox_item">
-                                <i class="fa fa-check" aria-hidden="true"></i>
-                                <input type="checkbox" class="checkbox" id="role_1" value="Sinh viên" /> Sinh viên
-                            </label>
 
-                            <label for="role_2" class="checkbox_item">
-                                <i class="fa fa-check" aria-hidden="true"></i>
-                                <input type="checkbox" class="checkbox" id="role_2" value="Phụ huynh" /> Phụ huynh
-                            </label>*@
+                            <div class="signin-line" style="width: 100%; height: 1px; background-color: #0c7a47; margin-top: 20px;"></div>
+
+                            <form id="Action" action="/Login/Login" class="signin-form" autocomplete="off">
+                                 <label for="username" class="signin-label font-weight-bold">Tên Đăng Nhập</label> <p style="color:red" id="Notificationusername">@noti</p>
+                                 <input type="text" id="username" name="Student_Id" class="signin-input" placeholder="Eg: TriVan77">
+                                 <label for="password" class="signin-label font-weight-bold">Mật Khẩu</label> <p style="color:red" id="Notificationpassword"></p> 
+                                 <input type="password" id="password" name="Password" class="signin-input" placeholder="Eg: *******">
+                                 <button id="login" class="signin-submit">Đăng Nhập</button>
+                            </form>
+                            <p class="signin-already" style="margin-top: 27px; text-align: center;">
+                                 <span>Bạn chưa có tài khoản ?</span>
+                                 <a href="#" class="signin-signup-link" style="color: #0c7a47;">Đăng Ký</a>
+                            </p>
+                       </div>
+                  </div>
+             </div>
+
+             <script>
+                  var check = false;
+
+                  $("#login").click(function () {
 
 
-                        </div>
+                       if ($("#username").val() == "") {
+                            $("#Notificationusername").text("Vui lòng nhập tên đăng nhập");
+                            alert("Dien user");
+                            check = check & false;
+                       }
+                       if ($("#password").val() == "") {
+                            $("#Notificationpassword").text("Vui lòng nhập mật khẩu");
+                            check = check & false;
+                       }
 
-                        <div class="signin-line" style="width: 100%; height: 1px; background-color: #0c7a47; margin-top: 20px;"></div>
-
-                        <form action="#" class="signin-form" autocomplete="off">
-                            <label for="username" class="signin-label font-weight-bold">Tên Đăng Nhập</label>
-                            <input type="text" id="username" class="signin-input" placeholder="Eg: TriVan77">
-                            <label for="password" class="signin-label font-weight-bold">Mật Khẩu</label>
-                            <input type="password" id="password" class="signin-input" placeholder="Eg: *******">
-                            <button class="signin-submit">Đăng Nhập</button>
-                        </form>
-                        <p class="signin-already" style="margin-top: 27px; text-align: center;">
-                            <span>Bạn chưa có tài khoản ?</span>
-                            <a href="#" class="signin-signup-link" style="color: #0c7a47;">Đăng Ký</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
+                       if (check)
+                            $("#Action").submit();
+                       check = true;
+                  });
+             </script>
 
         </div>
         <div class="footer-login ">
